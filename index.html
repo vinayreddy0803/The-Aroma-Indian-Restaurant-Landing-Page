@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Aroma - A Symphony of Flavours</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>THE AROMA</h1>
+                <span class="logo-icon"></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#reservation" class="nav-link">Reservation</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <h1>THE AROMA</h1>
+                <div class="logo-decoration"></div>
+            </div>
+            <p class="tagline">A Symphony of Flavours</p>
+            <p class="hero-description">Experience the authentic taste of India with our carefully crafted dishes and warm hospitality</p>
+            <button class="cta-button" onclick="scrollToSection('reservation')">Book a Table</button>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About The Aroma</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Culinary Journey</h3>
+                    <p>For over two decades, The Aroma has been serving authentic Indian cuisine with a passion for preserving traditional flavors while embracing modern culinary techniques. Our story began with a simple vision: to create a dining experience that transports you to the heart of India through every bite.</p>
+                    <p>Our master chefs, trained in the classical traditions of Indian cooking, use only the finest spices and freshest ingredients to create dishes that are not just meals, but memories. From the smoky tandoors to the aromatic biryanis, every dish tells a story of heritage, love, and culinary excellence.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <span>Award Winning</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Fresh Ingredients</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-fire"></i>
+                            <span>Traditional Recipes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Restaurant Interior" crossorigin="anonymous">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <div class="section-divider"></div>
+                <p>Discover our carefully curated selection of authentic Indian dishes</p>
+            </div>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="veg">Vegetarian</button>
+                <button class="filter-btn" data-filter="non-veg">Non-Vegetarian</button>
+                <button class="filter-btn" data-filter="specials">Chef's Specials</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+                <!-- Vegetarian Items -->
+                <div class="menu-item" data-category="veg">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Paneer Butter Masala" crossorigin="anonymous">
+                        <div class="menu-overlay">
+                            <span class="veg-indicator">🟢</span>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h4>Paneer Butter Masala</h4>
+                        <p>Creamy tomato-based curry with soft paneer cubes</p>
+                        <span class="price">₹280</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="veg">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Veg Thali" crossorigin="anonymous">
+                        <div class="menu-overlay">
+                            <span class="veg-indicator">🟢</span>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h4>Veg Thali</h4>
+                        <p>Complete meal with dal, sabzi, roti, rice & dessert</p>
+                        <span class="price">₹300</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="veg">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" alt="Tandoori Roti" crossorigin="anonymous">
+                        <div class="menu-overlay">
+                            <span class="veg-indicator">🟢</span>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h4>Tandoori Roti</h4>
+                        <p>Fresh bread baked in traditional clay oven</p>
+                        <span class="price">₹40</span>
+                    </div>
+                </div>
+
+                <!-- Non-Vegetarian Items -->
+                <div class="menu-item" data-category="non-veg">
+                    <div class="menu-image">
+                        <img src="https://png.pngtree.com/thumb_back/fw800/background/20240204/pngtree-top-view-of-chicken-biryani-indian-food-delicious-ramadan-iftar-meal-image_15585911.png" alt="Chicken Biryani" crossorigin="anonymous">
+                        <div class="menu-overlay">
+                            <span class="non-veg-indicator">🔴</span>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h4>Chicken Biryani</h4>
+                        <p>Aromatic basmati rice with tender chicken & spices</p>
+                        <span class="price">₹350</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="non-veg specials">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2086&q=80" alt="Tandoori Chicken" crossorigin="anonymous">
+                        <div class="menu-overlay">
+                            <span class="non-veg-indicator">🔴</span>
+                            <span class="special-badge">Chef's Special</span>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h4>Tandoori Chicken</h4>
+                        <p>Marinated chicken grilled in traditional tandoor</p>
+                        <span class="price">₹420</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="non-veg">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80" alt="Mutton Curry" crossorigin="anonymous">
+                        <div class="menu-overlay">
+                            <span class="non-veg-indicator">🔴</span>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h4>Mutton Curry</h4>
+                        <p>Tender mutton in rich, spiced gravy</p>
+                        <span class="price">₹480</span>
+                    </div>
+                </div>
+
+                <!-- Desserts & Specials -->
+                <div class="menu-item" data-category="veg specials">
+                    <div class="menu-image">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.dLM9Apcsfisj6N9eHkra3wHaFI?pid=Api&P=0&h=220" alt="Gulab Jamun" crossorigin="anonymous">
+                        <div class="menu-overlay">
+                            <span class="veg-indicator">🟢</span>
+                            <span class="special-badge">Popular</span>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h4>Gulab Jamun</h4>
+                        <p>Soft milk dumplings in cardamom sugar syrup</p>
+                        <span class="price">₹120</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="veg specials">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Masala Dosa" crossorigin="anonymous">
+                        <div class="menu-overlay">
+                            <span class="veg-indicator">🟢</span>
+                            <span class="special-badge">Chef's Special</span>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h4>Masala Dosa</h4>
+                        <p>Crispy crepe with spiced potato filling</p>
+                        <span class="price">₹180</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <div class="section-divider"></div>
+                <p>A glimpse into our culinary artistry and dining experience</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Restaurant Ambiance" crossorigin="anonymous">
+                    <div class="gallery-overlay">
+                        <h4>Elegant Dining</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1977&q=80" alt="Chef at Work" crossorigin="anonymous">
+                    <div class="gallery-overlay">
+                        <h4>Master Chefs</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.CDQkPThUAgeiKV237UXdHQHaEO?pid=Api&P=0&h=220" alt="Food Presentation" crossorigin="anonymous">
+                    <div class="gallery-overlay">
+                        <h4>Culinary Art</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Fresh Spices" crossorigin="anonymous">
+                    <div class="gallery-overlay">
+                        <h4>Fresh Spices</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Interior Design" crossorigin="anonymous">
+                    <div class="gallery-overlay">
+                        <h4>Warm Ambiance</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2006&q=80" alt="Desserts" crossorigin="anonymous">
+                    <div class="gallery-overlay">
+                        <h4>Sweet Delights</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Make a Reservation</h2>
+                <div class="section-divider"></div>
+                <p>Book your table for an unforgettable dining experience</p>
+            </div>
+            
+            <div class="reservation-content">
+                <div class="reservation-info">
+                    <h3>Reserve Your Table</h3>
+                    <p>Join us for an authentic Indian dining experience. Our team is ready to serve you with the finest flavors and warm hospitality.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9121 561 056</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Open Daily: 11:00 AM - 11:00 PM</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span> OLD GUNTUR, GUNTUR District, ANDHRAPRADESH</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="reservation-form" id="reservation-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="contact" name="contact" placeholder="Contact Number" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="guests" name="guests" required>
+                            <option value="">Number of Guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8+ Guests</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us</h2>
+                <div class="section-divider"></div>
+                <p>Visit us at our convenient location in the heart of the city</p>
+            </div>
+            
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Visit The Aroma</h3>
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>The Aroma Restaurant</strong><br>
+                            OLD GUNTUR, GUNTUR District<br>
+                            ANDHRAPRADESH  522001 <br>
+                            India
+                        </div>
+                    </div>
+                    
+                    <div class="location-details">
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9121 561 056</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@thearoma.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Daily: 11:00 AM - 11:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Restaurant Location Map" crossorigin="anonymous">
+                    <div class="map-overlay">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>The Aroma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>THE AROMA</h3>
+                        <span class="logo-icon"></span>
+                    </div>
+                    <p>A Symphony of Flavours</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>OLD GUNTUR, GUNTUR</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9121 561 056</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@thearoma.com</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="hours">
+                        <div class="hour-item">
+                            <span>Monday - Sunday</span>
+                            <span>11:00 AM - 11:00 PM</span>
+                        </div>
+                        <div class="hour-item">
+                            <span>Kitchen Closes</span>
+                            <span>10:30 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Aroma Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reservation Confirmation Modal -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>Reservation Confirmed!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for choosing The Aroma. Your table has been reserved successfully.</p>
+                <p>We'll send you a confirmation message shortly.</p>
+            </div>
+            <button class="modal-close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
